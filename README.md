@@ -2,7 +2,13 @@
 Containerized version of Offline VyPR Analysis
 
 ## Install Docker engine
-First step is to run docker as a non-root user by:
+Run the script to install docker enginer
+
+```
+$ ./install_docker.sh
+``` 
+
+To run docker as a non-root user, do the following:
 ```
 $ sudo groupadd docker
 $ sudo usermod -aG docker $USER
@@ -15,11 +21,6 @@ $ newgrp docker
 
 ```
 
-Run the script to install docker enginer
-
-```
-$ ./install_docker.sh
-``` 
 
 ## Build the analysis container
 ```

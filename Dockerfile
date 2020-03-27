@@ -4,7 +4,7 @@
 # Therefore, creating a layer on top of the default jupyter container is not feasible
 
 # Date of creation - 26.03.2020
-# Maintainer - Jack the ripper 
+# Maintainer -  omjaved
 
 # OS package, without tag means we will always take the latest os image
 FROM ubuntu
@@ -32,11 +32,11 @@ RUN git clone http://www.github.com/martahan/OfflineAnalysisNotebooks.git
 WORKDIR /vypranalysis/OfflineAnalysisNotebooks/
 
 # Fetching the GitHub code for VyPR , Server and analysis
-RUN git clone http://www.github.com/martahan/VyPRServer.git                    && \
-    git clone http://www.github.com/martahan/VyPRAnalysis.git                  && \
-    git clone http://www.github.com/pyvypr/VyPR.git                            && \
+RUN git clone http://www.github.com/martahan/VyPRServer.git                                                           && \
+    git clone http://www.github.com/martahan/VyPRAnalysis.git                                                         && \
+    git clone http://www.github.com/pyvypr/VyPR.git                                                                   && \
     git clone http://www.github.com/pyvypr/VyPR.git   /vypranalysis/OfflineAnalysisNotebooks/VyPRServer/VyPR/         && \  
-    cp verdicts.db /vypranalysis/OfflineAnalysisNotebooks/VyPRServer/verdicts.db                                     && \
+    cp verdicts.db /vypranalysis/OfflineAnalysisNotebooks/VyPRServer/verdicts.db                                      && \
     rm verdicts.db
 
 # Start Jupyter Notebook
